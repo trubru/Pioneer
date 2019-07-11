@@ -1,0 +1,430 @@
+/* Pioneer     Scout Website Design System  */
+/* Created by  Stuart Holmes 2019           */
+/* Twitter     @trubru                      */
+
+/*
+https://scoutsbrand.org.uk/catalogue/item/digital-style-guide
+Scout Purple    #7413DC
+Scout Teal      #00A794
+Black           #000000
+Dark Grey       #707070
+Light Grey      #F5F5F5
+White           #FFFFFF
+Beavers         #006CDF
+Cubs            #23A956
+Scouts          #003A44
+
+*/
+
+html {
+      scroll-behavior: smooth;
+    }
+
+body {
+    margin: 0;
+    font-size: 19px;
+    font-family: "Nunito Sans", sans-serif;
+    background-color: #f0f8ff;
+}
+
+h1 {
+    font-size: 40px;
+    color: #7413dc;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+a {
+    color: #7413dc;
+    
+    text-decoration: none;
+}
+
+    a:hover {
+        color: #460e83;
+    }
+
+table {
+    width: 100%;  
+    border-spacing: 0; 
+}
+
+    td,
+    th {
+        padding: 0.5em;
+
+    }
+
+    tr td {
+        border-top: 1px solid #ccc;   
+    }
+
+dd {
+	padding: 1.25em 0 0.5em 0;
+	margin: -2.60em 0 0 170px;
+	min-height: 1.5em;
+}
+
+main {
+    position: relative;
+    max-width: 1020px;
+    margin: 0 auto;
+    padding: 0 20px 20px 20px;
+    background: #fff;
+}
+
+footer {
+    text-align: center;
+    font-size: 14px;
+}
+
+    footer a {
+        color: #fff;
+    }
+
+    footer a:hover {
+        color: #fff;
+        text-decoration: underline;
+    }
+
+#page-header-inner {
+    display: flex;
+    width: 1060px;    
+    margin: 0 auto;
+    box-sizing: border-box;
+    background: #fff;
+}
+
+#main-menu-wrapper {
+    align-self: flex-end;
+}
+
+#page-header #logo {
+  width: 220px;
+}
+
+#page-header #logo img {
+    height: 100px;
+}
+
+    #toggle-menu-visibility {
+        display: none;
+    }
+
+#page-header-inner nav {
+    flex: 1;
+}
+
+#page-header-inner nav ul {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 10px 10px 10px;
+    padding: 0;
+    list-style: none;
+}
+
+#page-header-inner nav ul li {
+    margin: 0;
+    padding: 0;
+}
+
+#page-header-inner nav ul li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#footer-social {    
+    max-width: 1020px;
+    margin: 0 auto;
+    padding: 0px 20px;
+    background: #00A794;
+    color: #fff;
+    text-align: center;
+}
+
+#footer-main {
+    max-width: 1020px;
+    margin: 0 auto;
+    padding: 20px 20px;
+    background: #7413DC;
+    color: #fff;
+}
+
+#footer-scouts-logo {
+    text-align: center;
+}
+
+#footer-scouts-logo img {
+    width: 100px;
+}
+
+.hero {
+    padding: 50px;
+    color: #fff;           
+    background-image: url(../../images/hero-main.jpg);
+    background-size: cover;
+    background-position: center left;
+    background-repeat: no-repeat;
+}
+
+    .hero.volunteer-hero{
+        background-image: url(../../images/hero-volunteer.jpg);
+    }
+
+    .hero .hero-content{
+        display: inline-block;
+        mix-blend-mode: screen;
+        box-sizing: content-box;
+        padding: 20px;
+        background-color: #fff;
+        color: #000;
+        line-height: 1;
+        font-size: 4em;
+        font-weight: 900;
+    }
+
+.section-cards {
+    display: flex;
+    margin-bottom: 0;
+    padding: 0; 
+    list-style: none;
+}
+
+.section-cards li {
+    margin: 0 3px 0 0;
+    padding: 0;
+    text-align: center;
+}
+
+.section-cards .section-logo {
+    height: 40px;
+}
+
+
+.section-cards a { 
+    display: block;
+    padding: 1.5em 15px;
+    background-color: #ccc;    
+    color: #fff;
+}
+
+.section-cards .beavers-section a.active-tab,
+.section-cards .beavers-section a:hover,
+.section-cards .beavers-section a:active {
+    background-color: #006CDF;
+}
+
+.section-cards .cubs-section a.active-tab,
+.section-cards .cubs-section a:hover,
+.section-cards .cubs-section a:active  {
+    background-color: #23A956;
+}
+
+.section-cards .scouts-section a.active-tab,
+.section-cards .scouts-section a:hover,
+.section-cards .scouts-section a:active  {
+    background-color: #003A44;
+}
+
+.scout-section-information {
+    border-width: 3px;
+    border-style: solid;
+    padding: 0 25px 25px 25px;
+}
+
+.scout-section-information.beavers-section  {
+    border-color: #006CDF;
+}
+
+.scout-section-information.cubs-section  {
+    border-color: #23A956;
+}
+
+.scout-section-information.scouts-section {
+    border-color: #003A44;
+}
+
+/* TODO: Explorers, Network */
+
+    .scout-section-details dt {
+        display: block;
+        font-weight: bold;
+        margin: 1em 0 0.5em 0;
+        padding: 0;
+    }
+    .scout-section-details dd {
+        display: block;
+        margin: 0.25em 0;
+        padding: 0;
+
+    }
+
+.call-out {
+    padding-left: 10px;
+    border-left: 1px solid #00A794;
+}
+
+    .call-out.footnote {
+        font-size: 0.8em;
+    }
+
+
+@media screen and (max-width: 1020px) {
+    
+    #page-header-inner {
+        width: auto;
+        display: block;
+    }
+    
+    #page-header-inner nav ul {
+        justify-content: flex-start;
+    }
+    
+    .hero .hero-content{
+        font-size: 1.5em;
+        padding: 0 25px;
+    }
+    
+    .hero .hero-content p {
+        margin: 25px 0;
+    }
+
+}
+
+@media screen and (max-width: 860px) {
+    .section-cards {
+        font-size: 0.85em;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .section-cards ul {
+        display: block;   
+    }
+    .section-cards ul li {
+        width: auto;
+        margin: 15px 0;
+    }
+    .section-cards ul li a {
+        min-height: auto;
+    }
+}
+@media screen and (max-width: 650px) {
+    #page-header-inner nav ul {
+        font-size: 0.8em;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    body {   
+    }
+    
+    main {
+        padding: 0 10px;
+    }
+    
+    #page-header {
+        background: #fff;
+    }
+    #page-header-inner {
+        position: relative;
+        width: auto;
+      /*  display: flex;*/
+    }
+    #page-header-inner #logo {
+        align-self: center;
+        width: 50%;
+    }
+    
+        #page-header-inner #logo img {
+            height: 60px;
+        }
+    #main-menu-wrapper {
+        position: relative;
+    }
+    #main-menu-wrapper nav {
+        background-color: #00A794;
+    }
+    
+    #page-header-inner nav ul {
+        display: block;
+        margin-bottom: 0;
+        font-size: 1em;
+    }
+    
+    #page-header-inner nav ul li a {
+        display: block;
+        border-bottom: 1px solid #fff;
+        color: #fff;
+    }
+    
+    #page-header-inner nav ul li a:hover,
+    #page-header-inner nav ul li a:focus {
+        opacity: 0.7;   
+    }
+    
+    #page-header-inner nav ul li:last-child a {
+        border: 0 none;    
+    }
+    
+    #toggle-menu-visibility {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 0.8em;
+    }
+    #show-menu-button,
+    #hide-menu-button {  
+        position: relative;  
+        display: inline-block;
+        padding: 10px 30px 10px 10px;
+        text-decoration: none;
+        background-image: url(../images/icon-compass.png);
+        background-position: right center;
+        background-repeat: no-repeat;
+        background-size: 26px;
+    }
+    #hide-menu-button {
+        background-image: url(../images/icon-cancel.png);
+    }
+
+    #toggle-menu-visibility {
+        display: block;
+    }
+    
+    .show-menu #main-menu {
+        max-height: 500px;
+        transition: max-height 0.25s ease-in;
+    }
+    
+    .show-menu #hide-menu-button {
+        display: inline-block;
+    }
+    
+    .show-menu #show-menu-button {
+        display: none;
+    }
+    
+    .hide-menu #main-menu {
+        max-height: 0;
+        overflow: hidden;
+        background: #d5d5d5;
+    }
+    
+    .hide-menu #hide-menu-button {
+        display: none;
+    }
+    
+    .hide-menu #show-menu-button {
+        display: inline-block;
+    }
+    
+    .section-cards .section-logo {
+        height: 20px;
+    }
+    
+}
