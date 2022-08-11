@@ -10,21 +10,43 @@ Black           #000000
 Dark Grey       #707070
 Light Grey      #F5F5F5
 White           #FFFFFF
+Squirrels       #e22e12
 Beavers         #006CDF
 Cubs            #23A956
 Scouts          #003A44
+Explorer        #00246b
+
 
 */
 
+/* TODO: use Nunito Sans - https://scoutsbrand.org.uk/catalogue/item/nunito-sans*/
+/* TODO: use em instead of px */
+/* TODO: use variables for colours */
+
+:root {
+    --primary-color: #7413DC;
+    --secondary-color: #00A794;
+    --darkgrey-color: #707070;
+    --lightgrey-color: #F5F5F5;
+    --squirrels-color: #e22e12;
+    --beavers-color: #006CDF;
+    --cubs-color: #23A956;
+    --scouts-color: #003A44;
+    --explorers-color: #00246b;
+}
+
 html {
-      scroll-behavior: smooth;
-    }
+    scroll-behavior: smooth;
+}
 
 body {
     margin: 0;
-    font-size: 19px;
+    font-size: 1.188em;
     font-family: "Nunito Sans", sans-serif;
-    background-color: #f0f8ff;
+}
+
+section {
+    padding: 0 50px;
 }
 
 h1 {
@@ -38,7 +60,6 @@ h2 {
 
 a {
     color: #7413dc;
-    
     text-decoration: none;
 }
 
@@ -47,24 +68,28 @@ a {
     }
 
 table {
-    width: 100%;  
-    border-spacing: 0; 
+    width: 100%;
+    border-spacing: 0;
 }
 
-    td,
-    th {
-        padding: 0.5em;
+td,
+th {
+    padding: 0.5em;
+}
 
-    }
-
-    tr td {
-        border-top: 1px solid #ccc;   
-    }
+tr td {
+    border-top: 1px solid #ccc;
+}
 
 dd {
-	padding: 1.25em 0 0.5em 0;
-	margin: -2.60em 0 0 170px;
-	min-height: 1.5em;
+    padding: 1.25em 0 0.5em 0;
+    margin: -2.60em 0 0 170px;
+    min-height: 1.5em;
+}
+
+#page-header {
+    
+    position: sticky;
 }
 
 main {
@@ -84,14 +109,14 @@ footer {
         color: #fff;
     }
 
-    footer a:hover {
-        color: #fff;
-        text-decoration: underline;
-    }
+        footer a:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
 
 #page-header-inner {
     display: flex;
-    width: 1060px;    
+    width: 1060px;
     margin: 0 auto;
     box-sizing: border-box;
     background: #fff;
@@ -102,44 +127,49 @@ footer {
 }
 
 #page-header #logo {
-  width: 220px;
+    width: 220px;
 }
 
-#page-header #logo img {
-    height: 100px;
-}
-
-    #toggle-menu-visibility {
-        display: none;
+    #page-header #logo img {
+        height: 100px;
     }
+
+#toggle-menu-visibility {
+    display: none;
+}
+
+#page-header-inner {
+    position: relative;
+}
 
 #page-header-inner nav {
     flex: 1;
+    position: absolute;
+    top: 2em;
+    right: 0;
 }
 
-#page-header-inner nav ul {
-    display: flex;
-    justify-content: flex-end;
-    margin: 0 10px 10px 10px;
-    padding: 0;
-    list-style: none;
-}
+    #page-header-inner nav ul {
+        display: flex;
+        justify-content: flex-end;
+        margin: 0 10px 10px 10px;
+        padding: 0;
+        list-style: none;
+    }
 
-#page-header-inner nav ul li {
-    margin: 0;
-    padding: 0;
-}
+        #page-header-inner nav ul li {
+            margin: 0;
+            padding: 0;
+        }
 
-#page-header-inner nav ul li a {
-    display: block;
-    padding: 10px;
-    text-decoration: none;
-    font-weight: bold;
-}
+            #page-header-inner nav ul li a {
+                display: block;
+                padding: 10px;
+                text-decoration: none;
+                font-weight: bold;
+            }
 
-#footer-social {    
-    max-width: 1020px;
-    margin: 0 auto;
+#footer-social {
     padding: 0px 20px;
     background: #00A794;
     color: #fff;
@@ -147,8 +177,6 @@ footer {
 }
 
 #footer-main {
-    max-width: 1020px;
-    margin: 0 auto;
     padding: 20px 20px;
     background: #7413DC;
     color: #fff;
@@ -158,110 +186,169 @@ footer {
     text-align: center;
 }
 
-#footer-scouts-logo img {
-    width: 100px;
-}
+    #footer-scouts-logo img {
+        width: 100px;
+    }
 
 .hero {
+    margin: 1em -50px;
     padding: 50px;
-    color: #fff;           
+    /*color: #fff;*/
     background-image: url(../../images/hero-main.jpg);
     background-size: cover;
     background-position: center left;
     background-repeat: no-repeat;
 }
 
-    .hero.volunteer-hero{
+details .hero {
+    margin: 1em 0;
+}
+
+    .hero.volunteer-hero {
         background-image: url(../../images/hero-volunteer.jpg);
     }
 
-    .hero .hero-content{
+    .hero.cub-and-leader-hero {
+        background-image: url(../../images/cub-and-leader.jpg);
+    }
+
+    .hero.squirrels-hero {
+        background-image: url(../../images/squirrels.jpg);
+    }
+    
+    .hero.young-leader-and-cub-hero {
+        background-image: url(../../images/young-leader-explorer-with-cub.jpg);
+    }
+
+    .hero.volunteer-and-beaver-hero {
+        background-image: url(../../images/male-volunteer-and-beaver-scouts.jpg);
+    }
+
+    .hero.two-cubs-leaping-into-water-hero {
+        background-image: url(../../images/two-cubs-leaping-into-water.jpg);
+    }
+
+
+    .hero .hero-content {
         display: inline-block;
-        mix-blend-mode: screen;
+        /*mix-blend-mode: screen;*/
         box-sizing: content-box;
-        padding: 20px;
-        background-color: #fff;
-        color: #000;
+        padding: 40px;
+        color: #404040;
+        background-color: rgb(255, 255, 255, 0.9);
         line-height: 1;
-        font-size: 4em;
+        font-size: 3em;
         font-weight: 900;
     }
 
+    .hero .hero-content p {
+        margin: 0;
+    }
+
 .section-cards {
-    display: flex;
+    /* display: flex;*/
     margin-bottom: 0;
-    padding: 0; 
+    padding: 0;
     list-style: none;
 }
 
-.section-cards li {
-    margin: 0 3px 0 0;
-    padding: 0;
-    text-align: center;
-}
+    .section-cards li {
+        margin: 0 3px 0 0;
+        padding: 0;
+        /*text-align: center;
+    width: 170px;*/
+        font-size: 0.8em;
+    }
 
-.section-cards .section-logo {
-    height: 40px;
-}
+    .section-cards .section-logo {
+        height: 20px;
+    }
 
 
-.section-cards a { 
-    display: block;
-    padding: 1.5em 15px;
-    background-color: #ccc;    
-    color: #fff;
-}
+    .section-cards a {
+        display: block;
+        padding: 1.5em 1.5em 1em 1.5em;
+        background-color: #7413dc;
+        color: #fff;
+        margin-bottom: 2px;
+    }
 
-.section-cards .beavers-section a.active-tab,
-.section-cards .beavers-section a:hover,
-.section-cards .beavers-section a:active {
-    background-color: #006CDF;
-}
+    .section-cards .squirrels-section a.active-tab,
+    .section-cards .squirrels-section a:hover,
+    .section-cards .squirrels-section a:active {
+        background-color: #e22e12;
+    }
 
-.section-cards .cubs-section a.active-tab,
-.section-cards .cubs-section a:hover,
-.section-cards .cubs-section a:active  {
-    background-color: #23A956;
-}
+    .section-cards .beavers-section a.active-tab,
+    .section-cards .beavers-section a:hover,
+    .section-cards .beavers-section a:active {
+        background-color: #006CDF;
+    }
 
-.section-cards .scouts-section a.active-tab,
-.section-cards .scouts-section a:hover,
-.section-cards .scouts-section a:active  {
-    background-color: #003A44;
-}
+    .section-cards .cubs-section a.active-tab,
+    .section-cards .cubs-section a:hover,
+    .section-cards .cubs-section a:active {
+        background-color: #23A956;
+    }
+
+    .section-cards .scouts-section a.active-tab,
+    .section-cards .scouts-section a:hover,
+    .section-cards .scouts-section a:active {
+        background-color: #003A44;
+    }
+
+    .section-cards .explorer-section a.active-tab,
+    .section-cards .explorer-section a:hover,
+    .section-cards .explorer-section a:active {
+        background-color: var(--explorers-colour);
+    }
+
+/* TODO:  Network */
 
 .scout-section-information {
     border-width: 3px;
     border-style: solid;
-    padding: 0 25px 25px 25px;
+    padding: 0 25px;
 }
 
-.scout-section-information.beavers-section  {
-    border-color: #006CDF;
-}
-
-.scout-section-information.cubs-section  {
-    border-color: #23A956;
-}
-
-.scout-section-information.scouts-section {
-    border-color: #003A44;
-}
-
-/* TODO: Explorers, Network */
-
-    .scout-section-details dt {
-        display: block;
-        font-weight: bold;
-        margin: 1em 0 0.5em 0;
-        padding: 0;
+    .scout-section-information.squirrels-section {
+        border-color: #e22e12;
     }
-    .scout-section-details dd {
-        display: block;
-        margin: 0.25em 0;
-        padding: 0;
 
+    .scout-section-information.beavers-section {
+        border-color: #006CDF;
     }
+
+    .scout-section-information.cubs-section {
+        border-color: #23A956;
+    }
+
+    .scout-section-information.scouts-section {
+        border-color: #003A44;
+    }
+
+    .scout-section-information.explorer-section {
+        border-color: var(--explorers-colour);
+    }
+
+    /* TODO: default, other sections.*/
+    .scout-section-information.squirrels-section .section-intro {
+        background-color: #e22e12;
+        color: #fff;
+    }
+
+.scout-section-details dt {
+    display: block;
+    font-weight: bold;
+    margin: 1em 0 0.5em 0;
+    padding: 0;
+}
+
+.scout-section-details dd {
+    display: block;
+    margin: 0.25em 0;
+    padding: 0;
+}
 
 .call-out {
     padding-left: 10px;
@@ -274,25 +361,24 @@ footer {
 
 
 @media screen and (max-width: 1020px) {
-    
+
     #page-header-inner {
         width: auto;
         display: block;
     }
-    
-    #page-header-inner nav ul {
-        justify-content: flex-start;
-    }
-    
-    .hero .hero-content{
+
+        #page-header-inner nav ul {
+            justify-content: flex-start;
+        }
+
+    .hero .hero-content {
         font-size: 1.5em;
         padding: 0 25px;
     }
-    
-    .hero .hero-content p {
-        margin: 25px 0;
-    }
 
+        .hero .hero-content p {
+            margin: 25px 0;
+        }
 }
 
 @media screen and (max-width: 860px) {
@@ -303,83 +389,97 @@ footer {
 
 @media screen and (max-width: 700px) {
     .section-cards ul {
-        display: block;   
+        display: block;
     }
-    .section-cards ul li {
-        width: auto;
-        margin: 15px 0;
-    }
-    .section-cards ul li a {
-        min-height: auto;
-    }
+
+        .section-cards ul li {
+            width: auto;
+            margin: 15px 0;
+        }
+
+            .section-cards ul li a {
+                min-height: auto;
+            }
 }
+
 @media screen and (max-width: 650px) {
+    #page-header-inner nav {
+        position: initial;
+        top: 0;
+        right: 0
+    }
+
     #page-header-inner nav ul {
         font-size: 0.8em;
     }
 }
 
 @media screen and (max-width: 550px) {
-    body {   
+    body {
     }
-    
+
     main {
         padding: 0 10px;
     }
-    
+
     #page-header {
         background: #fff;
     }
+
     #page-header-inner {
         position: relative;
         width: auto;
-      /*  display: flex;*/
+        /*  display: flex;*/
     }
-    #page-header-inner #logo {
-        align-self: center;
-        width: 50%;
-    }
-    
-        #page-header-inner #logo img {
-            height: 60px;
+
+        #page-header-inner #logo {
+            align-self: center;
+            width: 50%;
         }
+
+            #page-header-inner #logo img {
+                height: 60px;
+            }
+
     #main-menu-wrapper {
         position: relative;
     }
-    #main-menu-wrapper nav {
-        background-color: #00A794;
-    }
-    
+
+        #main-menu-wrapper nav {
+            background-color: #00A794;
+        }
+
     #page-header-inner nav ul {
         display: block;
         margin-bottom: 0;
         font-size: 1em;
     }
-    
-    #page-header-inner nav ul li a {
-        display: block;
-        border-bottom: 1px solid #fff;
-        color: #fff;
-    }
-    
-    #page-header-inner nav ul li a:hover,
-    #page-header-inner nav ul li a:focus {
-        opacity: 0.7;   
-    }
-    
-    #page-header-inner nav ul li:last-child a {
-        border: 0 none;    
-    }
-    
+
+        #page-header-inner nav ul li a {
+            display: block;
+            border-bottom: 1px solid #fff;
+            color: #fff;
+        }
+
+            #page-header-inner nav ul li a:hover,
+            #page-header-inner nav ul li a:focus {
+                opacity: 0.7;
+            }
+
+        #page-header-inner nav ul li:last-child a {
+            border: 0 none;
+        }
+
     #toggle-menu-visibility {
         position: absolute;
         top: 10px;
         right: 10px;
         font-size: 0.8em;
     }
+
     #show-menu-button,
-    #hide-menu-button {  
-        position: relative;  
+    #hide-menu-button {
+        position: relative;
         display: inline-block;
         padding: 10px 30px 10px 10px;
         text-decoration: none;
@@ -388,6 +488,7 @@ footer {
         background-repeat: no-repeat;
         background-size: 26px;
     }
+
     #hide-menu-button {
         background-image: url(../images/icon-cancel.png);
     }
@@ -395,36 +496,159 @@ footer {
     #toggle-menu-visibility {
         display: block;
     }
-    
+
     .show-menu #main-menu {
         max-height: 500px;
         transition: max-height 0.25s ease-in;
     }
-    
+
     .show-menu #hide-menu-button {
         display: inline-block;
     }
-    
+
     .show-menu #show-menu-button {
         display: none;
     }
-    
+
     .hide-menu #main-menu {
         max-height: 0;
         overflow: hidden;
         background: #d5d5d5;
     }
-    
+
     .hide-menu #hide-menu-button {
         display: none;
     }
-    
+
     .hide-menu #show-menu-button {
         display: inline-block;
     }
-    
+
     .section-cards .section-logo {
         height: 20px;
     }
-    
 }
+
+
+
+
+details {
+    margin-bottom: 1px;
+}
+
+    details summary {
+        cursor: pointer;
+        position: relative;
+        list-style: none;
+        padding: 1em;
+        color: #ffffff;
+        background-color: var(--primary-color);
+    }
+
+        details summary:hover {
+            background-color: var(--secondary-color);
+        }
+
+    details[open] summary {
+        background-color: var(--secondary-color);
+    }
+
+    details > summary:after {
+        display: block;
+        content: ' ';
+        position: absolute;
+        top: 1.5em;
+        right: 1em;
+        width: 20px;
+        height: 15px;
+        background-image: url(../images/down-arrow.svg);
+        background-repeat: no-repeat;
+    }
+
+    details[open] > summary:after {
+        transform: rotate(180deg);
+    }
+
+    details[open] > .details-contents {
+        padding: 0 1em 1em 1em;
+        border: 3px solid var(--secondary-color);
+    }
+
+    details.squirrels-section summary:hover,
+    details.squirrels-section[open] summary {
+        background-color: var(--squirrels-color);
+    }
+
+    details.squirrels-section[open] > .details-contents {
+        border-color: var(--squirrels-color);
+    }
+
+    details.beavers-section summary:hover,
+    details.beavers-section[open] summary {
+        background-color: var(--beavers-color);
+    }
+
+    details.beavers-section[open] > .details-contents {
+        border-color: var(--beavers-color);
+    }
+
+    details.cubs-section summary:hover,
+    details.cubs-section[open] summary {
+        background-color: var(--cubs-color);
+    }
+
+    details.cubs-section[open] > .details-contents {
+        border-color: var(--cubs-color);
+    }
+
+    details.scouts-section summary:hover,
+    details.scouts-section[open] summary {
+        background-color: var(--scouts-color);
+    }
+
+    details.scouts-section[open] > .details-contents {
+        border-color: var(--scouts-color);
+    }
+
+    details.explorers-section summary:hover,
+    details.explorers-section[open] summary {
+        background-color: var(--explorers-color);
+    }
+
+    details.explorers-section[open] > .details-contents {
+        border-color: var(--explorers-color);
+    }
+
+    blockquote {
+        position: relative;
+        border-radius: 20px;
+        background-color: var(--primary-color);
+        color: #fff;
+        padding: 30px;
+    }
+
+    blockquote > p {
+        margin-top: 0;
+    }
+
+    blockquote figcaption {
+        text-align: right;
+        font-weight: bold;
+    }
+
+    blockquote figcaption cite {
+        font-weight: normal;
+    }
+
+    blockquote::before {
+        position: absolute;
+        right: 50px;
+        bottom: -15px;
+        content: ' ';
+        display: block;
+        transform: rotate(45deg);
+        width: 40px;
+        height: 40px;
+        background-color: var(--primary-color);
+        border-radius: 5px;
+    }

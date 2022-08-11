@@ -46,8 +46,8 @@
             </section>
             
             <section>
-                <h1 id="about">About Pioneer</h1>                
-                <p>Pioneer is a design system providing scouts groups an easy way to develop websites that promote the group, sections and other information.</p>
+                <h1 id="about">About the Pioneer design system</h1>                
+                <p>Pioneer is an un-official design system that provides Scout groups an easy way to develop websites to promote their group, sections and other information.</p>
                 <p>It is designed with UK Scout Movement's brand in mind, which was launched in 2018, and will tie in with other promotional materials.</p>
                 <p>The design system was created by Stuart Holmes after volunteering to develop a website for <a href="http://4thmorpethscouts.org.uk/">4th Morpeth Scout Group</a>, and will enable Scout groups to create their own websites, and it could be used with digital maker badges.</p>
                 <p>Pioneer is open source and can be downloaded from, or contributed to, via Github at <a href="https://github.com/trubru/Pioneer">https://github.com/trubru/Pioneer</a>. Documentation will be added in time.</p>
@@ -56,93 +56,203 @@
             
             <section>
                 <h1 id="components">Components</h1>
-                
+
                 <h2>Logo</h2>
                 <p>You can create your logo at the <a href="https://scoutsbrand.org.uk/catalogue/item/logo-linear-purple">Scout Brand Center</a> - Look for the <em>Logo Linear - Purple</em> and customise accordingly to your group.</p>
                 <p>Replace <code>group-logo.png</code> with your logo file of the same name in the <code>images</code> folder.</p>
-                
-                <h2>Our sections</h2>
-                <p>Sections can be added as below.</p>
-                <p>You can add as many sections as your group requires. Explorers will be added soon.</p>
-                <ul class="section-cards">
-                    <li class="beavers-section">
-                        <a href="#beavers-information" id="show-beavers-tab" data-tab-content="beavers-information" class="tabs default-tab">
-                            <img src="pioneer/images/beavers-section-logo-white.png" alt="Beavers" class="section-logo">
-                        </a>
-                    </li>
-                    <li class="cubs-section">    
-                        <a href="#cubs-information" id="show-cubs-tab" data-tab-content="cubs-information" class="tabs">                                
-                            <img src="pioneer/images/cubs-section-logo-white.png" alt="Cubs" class="section-logo">
-                        </a>                            
-                    </li>
-                    <li class="scouts-section">
-                        <a href="#scouts-information" id="show-scouts-tab" data-tab-content="scouts-information" class="tabs">
-                            <img src="pioneer/images/scouts-section-logo-white.png" alt="Scouts" class="section-logo">
-                        </a>
-                    </li>
-                </ul>
-                <div id="beavers-information"  class="scout-section-information beavers-section tab-content default-tab">
-                    <h2>Beavers</h2>
-                    <p>Beavers are boys and girls from age 6 to 8 years old. They will make new friends and try new indoor and outdoor activities.</p>
-                    <dl class="scout-section-details">
-                        <dt>Monday @ HQ</dt>
-                        <dd>6.00pm until 7.00pm</dd>
-                        <dd>HQ, Staithes Lane</dd>	                        
-                        <dd>Waiting List</dd>                        
-                    </dl>
-                </div>
-                <div id="cubs-information" class="scout-section-information cubs-section tab-content">
-                    <h2>Cubs</h2>
-                    <p>Cubs are boys and girls from age 8 to 10½ years old. They will learn practical skills while having adventures with friends.</p>
-                    <dl class="scout-section-details">  
-                        <dt>Tuesday @ HQ</dt>
-                        <dd>6.45pm until 8.00pm</dd>
-                        <dd>Pegswood Primary School</dd>	   
-                        <dd>Spaces</dd>
-                    </dl>
-                </div>
-                <div id="scouts-information" class="scout-section-information scouts-section tab-content">
-                    <h2>Scouts</h2>
-                    <p>Scouts are boys and girls from age 10½ to 14 years old. They will enjoy activities to build confidence, resilience and a sense of adventure.</p>
-                    <dl class="scout-section-details">
-                        <dt>Monday Matobo @ HQ<dt>
-                        <dd>7.15pm until 9.00pm</dd>
-                        <dd>HQ, Staithes Lane</dd>	   
-                        <dd>Long Waiting List</dd>
-                    </dl>
-                </div>
-                
-                
-                <h2>Call Out</h2>
-                <p>Callouts are an excerpt of text and help direct a reader to important pieces of information.</p>
-                <div class="call-out footnote">
-                    <h4>Notes</h4>
-                    <dl>
-                        <dt>Spaces</dt><dd>Can start immediately</dd>
-                        <dt>Limited spaces</dt><dd>May be able to start depending on age, when you want to join etc</dd>
-                        <dt>Waiting list</dt><dd>Section is full, we have a waiting list of up to 6 months</dd>
-                        <dt>Long Waiting list</dt><dd>Section is full, we have a waiting list of greater than 6 months</dd>
-                    </dl>
-                </div>               
+                <h2>Details Panel</h2>
+                <p>The details panel is used to create a panel that reveals it's content when clicked.</p>
+                <p>There is a default style, and one for each type of section, so it is ideal for creating section information..</p>
+                <h3>Details panel examples</h3>
+                <details>
+                    <summary>
+                        Default
+                    </summary>
+                    <div class="details-contents">
+                        <p>Content</p>
+                    </div>
+                </details>
+
+                <details class="squirrels-section">
+                    <summary>
+                        <img src="pioneer/images/logo-squirrels.svg" alt="Squirrels" class="section-logo"><br />
+                        4-6 years
+                    </summary>
+                    <div class="details-contents">
+                        Section details
+                    </div>
+                </details>
+
+                <details class="beavers-section">
+                    <summary>
+                        <img src="pioneer/images/logo-beavers.svg" alt="Beavers" class="section-logo"><br />
+                        6-8 years
+                    </summary>
+                    <div class="details-contents">
+                        <h2>Beavers</h2>
+                        <p>Beavers are boys and girls from age 6 to 8 years old. They will make new friends and try new indoor and outdoor activities.</p>
+                        <dl class="scout-section-details">
+                            <dt>Monday @ HQ</dt>
+                            <dd>6.00pm until 7.00pm</dd>
+                            <dd>HQ, Staithes Lane</dd>
+                        </dl>
+                        <div class="call-out footnote">
+                            <h3>Availablity</h3>
+                            <p>We have spaces on Monday @ HQ, all other colonies have limited spaces.</p>
+                            <p>To register interest, please <a href="#contact">get in touch</a>.</p>
+                        </div>
+                    </div>
+                </details>
+
+                <details class="cubs-section">
+                    <summary>
+                        <img src="pioneer/images/logo-cubs.svg" alt="Cubs" class="section-logo"><br />
+                        6-8 years
+                    </summary>
+                    <div class="details-contents">
+                        <h2>Cubs</h2>
+                        <p>Cubs are boys and girls from age 8 to 10½ years old. They will learn practical skills while having adventures with friends.</p>
+                        <dl class="scout-section-details">
+                            <dt>Tuesday @ HQ</dt>
+                            <dd>6.45pm until 8.00pm</dd>
+                            <dd>Pegswood Primary School</dd>
+                        </dl>
+                        <div class="call-out footnote">
+                            <h3>Availablity</h3>
+                            <p>We have spaces on Monday @ HQ, all other packs have limited spaces.</p>
+                            <p>To register interest, please <a href="#contact">get in touch</a>.</p>
+                        </div>
+                    </div>
+                </details>
+
+                <details class="scouts-section">
+                    <summary>
+                        <img src="pioneer/images/logo-scouts.svg" alt="Scouts" class="section-logo"><br />
+                        10½ to 14 years
+                    </summary>
+                    <div class="details-contents">
+                        <h2>Scouts</h2>
+                        <p>Scouts are boys and girls from age 10½ to 14 years old. They will enjoy activities to build confidence, resilience and a sense of adventure.</p>
+                        <dl class="scout-section-details">
+                            <dt>Monday Matobo @ HQ<dt>
+                            <dd>7.15pm until 9.00pm</dd>
+                            <dd>HQ, Staithes Lane</dd>
+                        </dl>
+                        <div class="call-out footnote">
+                            <h3>Availablity</h3>
+                            <p>We have spaces on Monday @ HQ, all other troops have limited spaces.</p>
+                            <p>To register interest, please <a href="#contact">get in touch</a>.</p>
+                        </div>
+                    </div>
+                </details>
+
+                <details class="explorers-section">
+                    <summary>
+                        <img src="pioneer/images/logo-explorers.svg" alt="Explorers" class="section-logo"><br />
+                        14 to 18 years
+                    </summary>
+                    <div class="details-contents">
+                        <h2>Explorers</h2>
+                        <p>Explorers are boys and girls from age 14 to 18 years old. They will enjoy activities to build confidence, resilience and a sense of adventure.</p>
+                        <dl class="scout-section-details">
+                            <dt>Monday Matobo @ HQ<dt>
+                            <dd>7.15pm until 9.00pm</dd>
+                            <dd>HQ, Staithes Lane</dd>
+                        </dl>
+                        <div class="call-out footnote">
+                            <h3>Availablity</h3>
+                            <p>We have spaces on Monday @ HQ, all other troops have limited spaces.</p>
+                            <p>To register interest, please <a href="#contact">get in touch</a>.</p>
+                        </div>
+                    </div>
+                </details>
+
                 <h2>Hero Images</h2>
-                <p>Hero images use striking imagery to attract a reader’s attention. They commonly contain a strapline.</p>
-                <p>There are currently two hero images in Pioneer - default with no additional classname, and <code>volunteer-hero</code> for a volunteering section. You can replace the <code>hero-main.jpg</code> and <code>hero-volunteer</code> in the images folder.</p>
-                <div class="hero volunteer-hero">
+                <p>Hero images use striking imagery to attract a reader's attention. They commonly contain a strapline.</p>
+                              
+
+                <div class="hero cub-and-leader-hero">
                     <div class="hero-content">
-                        <p>Do more.<br>
-                        Share more.<br>
-                        Be more.</p>
+                        <p>
+                            Embrace<br> your next <br>adventure.
+                        </p>
                     </div>
                 </div>
+
+                <details>
+                    <summary>
+                        Hero images examples
+                    </summary>
+                    <div class="details-contents">
+                        <div class="hero volunteer-hero">
+                            <div class="hero-content">
+                                <p>
+                                    Do more.<br>
+                                    Share more.<br>
+                                    Be more.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="hero squirrels-hero">
+                            <div class="hero-content">
+                                <p>
+                                    Do more.<br>
+                                    Share more.<br>
+                                    Be more.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="hero young-leader-and-cub-hero">
+                            <div class="hero-content">
+                                <p>
+                                    Do more.<br>
+                                    Share more.<br>
+                                    Be more.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="hero volunteer-and-beaver-hero">
+                            <div class="hero-content">
+                                <p>
+                                    Do more.<br>
+                                    Share more.<br>
+                                    Be more.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="hero two-cubs-leaping-into-water">
+                            <div class="hero-content">
+                                <p>
+                                    Do more.<br>
+                                    Share more.<br>
+                                    Be more.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </details>
+
                 
-                <h2>Contact us</h2>
-                <p>Add contact details in the following format</p>
-                <h2>Email</h2>
-                <p class="call-out"><a href="mailto:example@example.co.uk">example@example.co.uk</a></p>
-                <h2>Write or Visit</h2>
+                <h2>Callouts</h2>
+                <p>Callouts are an excerpt of text and help direct a reader to important pieces of information.</p>
+                <h3>Callout example</h2>
+                <p>Callouts can be used to highlight contact information, or as a footnote.</p>
+                
                 <p class="call-out">Gilwell Park<br> Chingford<br> London<br>E4 7QW</p>
-                <h2>Phone</h2>
-                <p class="call-out">0345 555 1234</p>
+                
+                <div class="call-out footnote">
+                    <h3>Availablity</h3>
+                    <p>We have spaces on Monday @ HQ, all other troops have limited spaces.</p>
+                    <p>To register interest, please <a href="#contact">get in touch</a>.</p>
+                </div>
+
+                <h2>Quote</h2>
+                <p>Quotes can be used for volunteer testimony and suchlike.</p>
+                <blockquote>
+                    <p>What Scouting says to people is: Every child has a right to have an adventure. Life is about grabbing opportunities.</p>
+                    <figcaption>Bear Grylls<br><cite>Chief Scout</cite></figcaption>
+                </blockquote>
             </section>
         </main>
         <footer id="footer-social">
